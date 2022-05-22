@@ -83,7 +83,7 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
                             c.getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.container, fragment);
                     fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+//                    fragmentTransaction.commit();
                 }
             });
         }
