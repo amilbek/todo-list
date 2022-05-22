@@ -90,6 +90,13 @@ public class CreateTodoView extends Fragment {
         String title = this.editTitle.getText().toString();
         String description = this.editDescription.getText().toString();
 
+        if (title.equals("")) {
+            Toast.makeText(getContext(),
+                    "Title cannot be empty!",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+
         String date = null;
         String time = null;
 
@@ -101,8 +108,8 @@ public class CreateTodoView extends Fragment {
         }
 
         if (timePicker != null) {
-            if (timePicker.getHour() < 10 && timePicker.getMinute() < 10) {
-                time = "0" + timePicker.getHour() + ":0" + timePicker.getMinute();
+            if (timePicker.getMinute() < 10) {
+                time = timePicker.getHour() + ":0" + timePicker.getMinute();
             } else {
                 time = timePicker.getHour() + ":" + timePicker.getMinute();
             }
