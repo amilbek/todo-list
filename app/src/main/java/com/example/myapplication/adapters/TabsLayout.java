@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.myapplication.views.CalendarView;
 import com.example.myapplication.views.CreateTodoView;
+import com.example.myapplication.views.ThemeView;
 import com.example.myapplication.views.TodoListView;
 
 public class TabsLayout extends FragmentPagerAdapter {
@@ -31,6 +32,8 @@ public class TabsLayout extends FragmentPagerAdapter {
                 return new CreateTodoView();
             case 2:
                 return new CalendarView();
+            case 3:
+                return new ThemeView();
             default:
                 return new TodoListView();
 
